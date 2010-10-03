@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  purchaseable_id: 1
+  purchaseable_type: MyString
+  account_id: 1
+  product_id: 1
+
+two:
+  purchaseable_id: 1
+  purchaseable_type: MyString
+  account_id: 1
+  product_id: 1

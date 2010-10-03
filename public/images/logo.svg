@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="271.2825"
+   height="78.678734"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="logo.png"
+   style="display:inline">
+  <defs
+     id="defs4">
+    <filter
+       id="filter4685"
+       inkscape:label="Drop shadow"
+       width="1.5"
+       height="1.5"
+       x="-0.25"
+       y="-0.25"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4687"
+         in="SourceAlpha"
+         stdDeviation="0.9"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix4689"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.75 0 " />
+      <feOffset
+         id="feOffset4691"
+         in="bluralpha"
+         dx="1.7"
+         dy="1.7"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge4693"
+         result="fbSourceGraphic">
+        <feMergeNode
+           id="feMergeNode4695"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode4697"
+           in="SourceGraphic" />
+      </feMerge>
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4699" />
+      <feGaussianBlur
+         id="feGaussianBlur4701"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="0.9"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix4703"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.75 0 " />
+      <feOffset
+         id="feOffset4705"
+         in="bluralpha"
+         dx="1.7"
+         dy="1.7"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge4707"
+         result="fbSourceGraphic">
+        <feMergeNode
+           id="feMergeNode4709"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode4711"
+           in="fbSourceGraphic" />
+      </feMerge>
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5105" />
+      <feGaussianBlur
+         id="feGaussianBlur5107"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="1.38778e-16"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix5109"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.2 0 " />
+      <feOffset
+         id="feOffset5111"
+         in="bluralpha"
+         dx="0.8"
+         dy="0.8"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge5113"
+         result="fbSourceGraphic">
+        <feMergeNode
+           id="feMergeNode5115"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode5117"
+           in="fbSourceGraphic" />
+      </feMerge>
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5119" />
+      <feGaussianBlur
+         id="feGaussianBlur5121"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="1.38778e-16"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix5123"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.2 0 " />
+      <feOffset
+         id="feOffset5125"
+         in="bluralpha"
+         dx="0.8"
+         dy="0.8"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge5127">
+        <feMergeNode
+           id="feMergeNode5129"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode5131"
+           in="fbSourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.94"
+     inkscape:cx="-16951.768"
+     inkscape:cy="39.315544"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1043"
+     inkscape:window-height="901"
+     inkscape:window-x="547"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="1.9428903e-16"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(29.275227,-100.39191)"
+     style="display:inline">
+    <g
+       id="g5384"
+       transform="translate(30.851064,74.468085)">
+      <g
+         id="g5379">
+        <text
+           xml:space="preserve"
+           style="font-size:47.06997681px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4196c6;fill-opacity:1;stroke:none;filter:url(#filter4685);font-family:Bitstream Vera Sans"
+           x="8.7630272"
+           y="127.66087"
+           id="text2985"
+           sodipodi:linespacing="125%"
+           transform="matrix(0.85653221,0,0,1.1105394,-17127.43,-119.53501)"><tspan
+             sodipodi:role="line"
+             id="tspan2987"
+             x="8.7630272"
+             y="127.66087"
+             style="letter-spacing:-2.95364189px;fill:#4196c6;fill-opacity:1"><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan2989">noise</tspan>bytes</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

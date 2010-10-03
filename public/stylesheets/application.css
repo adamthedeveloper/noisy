@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: Lucida Grande;
+    color: #ffffff;
+}
+body {
+    background: url(/images/bg.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    text-align: center;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1000px;
+    height: 1000px;
+    text-align: left;
+}
+
+#header_container {
+    width: 100%;
+}
+
+#logo {
+    width: 45%;
+    height: 150px;
+    float:left;
+}
+
+#header_controls {
+    width: 45%;
+    height: 150px;
+    float: right;
+}

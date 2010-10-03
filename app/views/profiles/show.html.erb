@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @profile.bio %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @profile.state %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @profile.avatar.url(:thumb) %> <br />
+  <%= image_tag @profile.avatar.url(:medium) %>
+</p>
+
+<p>
+  <b>Avatar file name:</b>
+  <%= @profile.avatar_file_name %>
+</p>
+
+<p>
+  <b>Avatar content type:</b>
+  <%= @profile.avatar_content_type %>
+</p>
+
+<p>
+  <b>Avatar file size:</b>
+  <%= @profile.avatar_file_size %>
+</p>
+
+<p>
+  <b>Avatar updated at:</b>
+  <%= @profile.avatar_updated_at %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @profile.occupation %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @profile.company %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @profile.website %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

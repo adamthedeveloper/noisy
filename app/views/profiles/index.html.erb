@@ -1,0 +1,45 @@
+<h1>Listing profiles</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Bio</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Avatar file name</th>
+    <th>Avatar content type</th>
+    <th>Avatar file size</th>
+    <th>Avatar updated at</th>
+    <th>Occupation</th>
+    <th>Company</th>
+    <th>Website</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profiles.each do |profile| %>
+  <tr>
+    <td><%= profile.first_name %></td>
+    <td><%= profile.last_name %></td>
+    <td><%= profile.bio %></td>
+    <td><%= profile.city %></td>
+    <td><%= profile.state %></td>
+    <td><%= profile.avatar_file_name %></td>
+    <td><%= profile.avatar_content_type %></td>
+    <td><%= profile.avatar_file_size %></td>
+    <td><%= profile.avatar_updated_at %></td>
+    <td><%= profile.occupation %></td>
+    <td><%= profile.company %></td>
+    <td><%= profile.website %></td>
+    <td><%= link_to 'Show', profile %></td>
+    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+    <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profile', new_profile_path %>
