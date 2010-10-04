@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101003035134) do
+ActiveRecord::Schema.define(:version => 20101004055838) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20101003035134) do
     t.integer  "account_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "subtotal",   :default => 0.0
   end
 
   create_table "orders", :force => true do |t|
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20101003035134) do
     t.string   "status",     :default => "pending"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "subtotal",   :default => 0.0
   end
 
   create_table "products", :force => true do |t|
@@ -79,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20101003035134) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantity",          :default => 0
   end
 
 end

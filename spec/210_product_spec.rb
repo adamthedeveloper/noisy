@@ -24,8 +24,9 @@ describe Product do
     @product.should have(:no).errors_on(:price)
   end
 
-  it "must have a credit value" do
-    @product.should have(1).errors_on(:credit_value)
+  it "may or may not have a credit value" do
+    @product.credit_value = nil
+    @product.should have(:no).errors_on(:credit_value)
     @product.credit_value = 5
     @product.should have(:no).errors_on(:credit_value)
   end
