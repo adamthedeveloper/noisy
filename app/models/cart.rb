@@ -5,6 +5,9 @@ class Cart < ActiveRecord::Base
   belongs_to :account
   validates_presence_of :account
 
+  BILLING_ADDRESS = 'billing'
+  SHIPPING_ADDRESS = 'shipping'
+
   def convert_cart_to_order
     self.account.orders.build(
             :total => 0,
@@ -48,6 +51,16 @@ class Cart < ActiveRecord::Base
     subtotal = 0
     self.purchase_items.each { |item| subtotal += (item.quantity*item.product.price) }
     self.subtotal = subtotal
+    self.save!
+  end
+
+  def add_address(type = BILLING_ADDRESS, params = {})
+    case type
+      when BILLING_ADDRESS
+        self.billing_address = BillingAddress.new(Address.new(params))
+      when SHIPPING_ADDRESS
+        self.shipping_address = ShippingAddress.new(Address.new(params))
+    end
     self.save!
   end
 

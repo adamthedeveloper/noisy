@@ -43,6 +43,39 @@ describe Cart do
     @cart.remove_product(@product, 1)
     @cart.purchase_items.reload.last.quantity.should == 0
   end
+
+  it "should allow us to save a billing address" do
+    @cart.add_address('billing',
+                      {
+                       :first_name => Faker::Name.first_name,
+                       :last_name => Faker::Name.last_name,
+                       :street_1 => Faker::Address.street_address,
+                       :street_2 => Faker::Address.street_address,
+                       :city => Faker::Address.city,
+                       :state => Faker::Address.us_state,
+                       :postal_code => Faker::Address.zip_code,
+                       :phone => '(510)812-2011'
+                      }
+    )
+    @cart.billing_address.address.phone.should == '(510)812-2011'
+  end
+
+  it "should allow us to save a shipping address" do
+    @cart.add_address('shipping',
+                      {
+                       :first_name => Faker::Name.first_name,
+                       :last_name => Faker::Name.last_name,
+                       :street_1 => Faker::Address.street_address,
+                       :street_2 => Faker::Address.street_address,
+                       :city => Faker::Address.city,
+                       :state => Faker::Address.us_state,
+                       :postal_code => Faker::Address.zip_code,
+                       :phone => '(510)812-2011'
+                      }
+    )
+    @cart.shipping_address.address.phone.should == '(510)812-2011'
+
+  end
 end
 
 describe "Non-empty cart" do
