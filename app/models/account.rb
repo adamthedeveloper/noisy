@@ -11,4 +11,6 @@ class Account < ActiveRecord::Base
   has_one :profile
   has_many :orders
   has_one :cart
+  has_one :shipping_address, :as => :shipping_addressable
+  has_one :billing_address, :as => :billing_addressable
 end

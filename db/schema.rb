@@ -49,7 +49,8 @@ ActiveRecord::Schema.define(:version => 20101006054543) do
   end
 
   create_table "billing_addresses", :force => true do |t|
-    t.integer  "account_id"
+    t.integer  "billing_addressable_id"
+    t.string   "billing_addressable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -107,7 +108,8 @@ ActiveRecord::Schema.define(:version => 20101006054543) do
   end
 
   create_table "shipping_addresses", :force => true do |t|
-    t.integer  "account_id"
+    t.integer  "shipping_addressable_id"
+    t.string   "shipping_addressable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

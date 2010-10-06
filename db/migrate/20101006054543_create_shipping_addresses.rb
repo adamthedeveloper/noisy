@@ -1,8 +1,8 @@
 class CreateShippingAddresses < ActiveRecord::Migration
   def self.up
     create_table :shipping_addresses do |t|
-      t.integer :account_id
-
+      t.integer :shipping_addressable_id
+      t.string  :shipping_addressable_type
       t.timestamps
     end
   end

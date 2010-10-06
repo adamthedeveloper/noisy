@@ -1,5 +1,7 @@
 class Cart < ActiveRecord::Base
   has_many :purchase_items, :as => :purchaseable
+  has_one :shipping_address, :as => :shipping_addressable
+  has_one :billing_address, :as => :billing_addressable
   belongs_to :account
   validates_presence_of :account
 
