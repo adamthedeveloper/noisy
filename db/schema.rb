@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101004055838) do
+ActiveRecord::Schema.define(:version => 20101006053628) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -31,6 +31,28 @@ ActiveRecord::Schema.define(:version => 20101004055838) do
 
   add_index "accounts", ["email"], :name => "index_accounts_on_email", :unique => true
   add_index "accounts", ["reset_password_token"], :name => "index_accounts_on_reset_password_token", :unique => true
+
+  create_table "addresses", :force => true do |t|
+    t.string   "addressable_type"
+    t.integer  "addressable_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street_1"
+    t.string   "street_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "billing_addresses", :force => true do |t|
+    t.integer  "account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "carts", :force => true do |t|
     t.integer  "account_id"
