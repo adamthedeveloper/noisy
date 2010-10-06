@@ -57,9 +57,11 @@ class Cart < ActiveRecord::Base
   def add_address(type = BILLING_ADDRESS, params = {})
     case type
       when BILLING_ADDRESS
-        self.billing_address = BillingAddress.new(Address.new(params))
+        self.billing_address.build
+        self.billing_address.address.build(params)
       when SHIPPING_ADDRESS
-        self.shipping_address = ShippingAddress.new(Address.new(params))
+        self.shipping_address.build
+        self.shipping_address.address.build(params)
     end
     self.save!
   end
