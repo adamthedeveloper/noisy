@@ -22,6 +22,11 @@ class Cart < ActiveRecord::Base
       item.delete
     end
 
+    self.billing_address.update_attributes(:billing_addressable => order)
+    self.shipping_address.update_attributes(:shipping_addressable => order)
+
+    order.save!
+
     self.delete
   end
 
@@ -48,22 +53,24 @@ class Cart < ActiveRecord::Base
   end
 
   def reset_subtotal
-    subtotal = 0
-    self.purchase_items.each { |item| subtotal += (item.quantity*item.product.price) }
-    self.subtotal = subtotal
+    self.purchase_items.each { |item| self.subtotal += (item.quantity*item.product.price) }
     self.save!
   end
 
   def add_address(type = BILLING_ADDRESS, params = {})
+    address = nil
     case type
       when BILLING_ADDRESS
-        self.billing_address.build
-        self.billing_address.address.build(params)
+        address = BillingAddress.new(:billing_addressable => self)
       when SHIPPING_ADDRESS
-        self.shipping_address.build
-        self.shipping_address.address.build(params)
+        address = ShippingAddress.new(:shipping_addressable => self)
     end
-    self.save!
+
+    if !address.nil?
+      address.addresses.build(params)
+      address.save!
+      self.save!
+    end
   end
 
 end

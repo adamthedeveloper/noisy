@@ -46,35 +46,34 @@ describe Cart do
 
   it "should allow us to save a billing address" do
     @cart.add_address('billing',
-                      {
-                       :first_name => Faker::Name.first_name,
-                       :last_name => Faker::Name.last_name,
-                       :street_1 => Faker::Address.street_address,
-                       :street_2 => Faker::Address.street_address,
-                       :city => Faker::Address.city,
-                       :state => Faker::Address.us_state,
-                       :postal_code => Faker::Address.zip_code,
-                       :phone => '(510)812-2011'
-                      }
+      {
+        :first_name => Faker::Name.first_name,
+        :last_name => Faker::Name.last_name,
+        :street_1 => Faker::Address.street_address,
+        :street_2 => Faker::Address.street_address,
+        :city => Faker::Address.city,
+        :state => Faker::Address.us_state,
+        :postal_code => Faker::Address.zip_code,
+        :phone => '(510)812-2011'
+      }
     )
-    @cart.billing_address.address.phone.should == '(510)812-2011'
+    @cart.billing_address.addresses.first.phone.should == '(510)812-2011'
   end
 
   it "should allow us to save a shipping address" do
     @cart.add_address('shipping',
-                      {
-                       :first_name => Faker::Name.first_name,
-                       :last_name => Faker::Name.last_name,
-                       :street_1 => Faker::Address.street_address,
-                       :street_2 => Faker::Address.street_address,
-                       :city => Faker::Address.city,
-                       :state => Faker::Address.us_state,
-                       :postal_code => Faker::Address.zip_code,
-                       :phone => '(510)812-2011'
-                      }
+      {
+        :first_name => Faker::Name.first_name,
+        :last_name => Faker::Name.last_name,
+        :street_1 => Faker::Address.street_address,
+        :street_2 => Faker::Address.street_address,
+        :city => Faker::Address.city,
+        :state => Faker::Address.us_state,
+        :postal_code => Faker::Address.zip_code,
+        :phone => '(510)812-2011'
+      }
     )
-    @cart.shipping_address.address.phone.should == '(510)812-2011'
-
+    @cart.shipping_address.addresses.first.phone.should == '(510)812-2011'
   end
 end
 
@@ -85,6 +84,20 @@ describe "Non-empty cart" do
     @cart.save!
     @cart.account = @account
     3.times { @cart.add_product(Product.make) }
+    ['billing', 'shipping'].each do |type|
+      @cart.add_address(type,
+        {
+          :first_name => Faker::Name.first_name,
+          :last_name => Faker::Name.last_name,
+          :street_1 => Faker::Address.street_address,
+          :street_2 => Faker::Address.street_address,
+          :city => Faker::Address.city,
+          :state => Faker::Address.us_state,
+          :postal_code => Faker::Address.zip_code,
+          :phone => '(510)812-2011'
+        }
+      )
+    end
   end
 
   it "should have an accurate subtotal" do
@@ -98,6 +111,8 @@ describe "Non-empty cart" do
     order = @account.orders.last
     order.purchase_items.count.should == 3
     order.subtotal.should == 15
+    order.billing_address.addresses.first.phone.should == '(510)812-2011'
+    order.shipping_address.addresses.first.phone.should == '(510)812-2011'
   end
 
 end
