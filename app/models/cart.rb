@@ -53,6 +53,7 @@ class Cart < ActiveRecord::Base
   end
 
   def reset_subtotal
+    self.subtotal = 0
     self.purchase_items.each { |item| self.subtotal += (item.quantity*item.product.price) }
     self.save!
   end
