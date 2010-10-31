@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fa5953-968c-42f9-8f51-5a72f866ca46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/account/accounts.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/noisebytes.iml" afterPath="$PROJECT_DIR$/.idea/noisebytes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20100815043720_devise_create_accounts.rb" afterPath="$PROJECT_DIR$/db/migrate/20100815043720_devise_create_accounts.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/env.rb" afterPath="$PROJECT_DIR$/features/support/env.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" />
-    </list>
+    <list default="true" id="26fa5953-968c-42f9-8f51-5a72f866ca46" name="Default" comment="" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="noisebytes.iws" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -809,7 +799,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="login stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="cucumber stuff" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -824,6 +814,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Cart related changes around addresses" />
     <MESSAGE value="login stuff" />
+    <MESSAGE value="cucumber stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

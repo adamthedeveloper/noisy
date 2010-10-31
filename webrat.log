@@ -1,0 +1,12 @@
+# Logfile created on 2010-10-30 22:15:16 -0700 by logger.rb/25413
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
