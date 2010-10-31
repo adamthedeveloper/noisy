@@ -7,6 +7,10 @@ Feature: My Account
     Given I am on the home page
     Then I should see "Sign In"
     Then I follow "Sign In"
-    When I fill in "email" with ""
+    When I fill in "email" with "user@no_profile.com"
+    And I fill in "password" with "password"
+    And I press "Sign in"
+    And I wait 3 seconds
+    Then I should see "NICE"
         
     

@@ -15,6 +15,12 @@ require 'cucumber/web/tableish'
 require 'webrat'
 require 'webrat/core/matchers'
 
+#Seed the DB
+Fixtures.reset_cache
+fixtures_folder = Rails.root.join('spec', 'fixtures')
+fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
+Fixtures.create_fixtures(fixtures_folder, fixtures)
+
 Webrat.configure do |config|
   config.mode = :rack #:rails
   config.open_error_files = false # Set to true if you want error pages to pop up in the browser
