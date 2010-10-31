@@ -42,6 +42,8 @@ gem 'warden'
 group :test, :development do
   gem "autotest"
   gem 'blueprints'
+  gem 'cucumber'
+  gem 'cucumber-rails'
   gem 'faker'
   gem 'machinist', "1.0.6"
   gem 'rspec'
