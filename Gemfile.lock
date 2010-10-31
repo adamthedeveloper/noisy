@@ -39,6 +39,7 @@ GEM
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
     autotest (4.4.0)
+    awesome_print (0.2.1)
     aws-s3 (0.6.2)
       builder
       mime-types
@@ -126,7 +127,7 @@ GEM
     tzinfo (0.3.23)
     warden (1.0.0)
       rack (>= 1.0.0)
-    webrat (0.7.1)
+    webrat (0.7.2)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
@@ -137,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   autotest
+  awesome_print
   aws-s3
   blueprints
   cucumber
@@ -156,4 +158,4 @@ DEPENDENCIES
   ruby_parser
   sinatra (= 1.0)
   warden
-  webrat
+  webrat (>= 0.7.2)

@@ -4,6 +4,7 @@ gem 'rails', '3.0.0.rc'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'awesome_print', :require => 'ap'
 gem 'aws-s3'
 gem 'cucumber'
 gem 'devise', '~>1.2.0', :git => 'git://github.com/plataformatec/devise.git'
@@ -48,5 +49,5 @@ group :test, :development do
   gem 'machinist', "1.0.6"
   gem 'rspec'
   gem "rspec-rails", ">= 2.0.0.beta.22"
-  gem 'webrat'
+  gem 'webrat', ">= 0.7.2"
 end

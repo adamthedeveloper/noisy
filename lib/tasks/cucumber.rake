@@ -4,6 +4,8 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+# THIS WAS ADDED BY ADAM - SO THAT WE ARE RUNNING CUCUMBER IN TEST MODE AT ALL TIMES
+ENV["RAILS_ENV"] = "test"
 
 unless ARGV.any? {|a| a =~ /^gems/} # Don't load anything when running the gems:* tasks
 
@@ -12,6 +14,8 @@ $LOAD_PATH.unshift(File.dirname(vendored_cucumber_bin) + '/../lib') unless vendo
 
 begin
   require 'cucumber/rake/task'
+
+  Rake.application.options.trace = true  # always run with --trace
 
   namespace :cucumber do
     Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|
