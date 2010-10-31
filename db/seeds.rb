@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+seeds_dir = Rails.root.join("db","seeds")
+Dir[seeds_dir + "/*.rb"].sort.each do |seed_file|
+  ap seed_file
+  require seed_file
+end

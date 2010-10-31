@@ -60,6 +60,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="fixture_builder" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="haml" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -195,6 +201,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.5.6, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/rack-test-0.5.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.3.1, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/nokogiri-1.4.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] webrat (v0.7.2, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/webrat-0.7.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] fixture_builder (v0.2.0, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/fixture_builder-0.2.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/rake-0.8.7)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] devise (v1.2.rc, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/bundler/gems/devise-69ecbd1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.8, /Users/user/.rvm/gems/ruby-1.9.2-rc2@global/gems/treetop-1.4.8)" level="application" />

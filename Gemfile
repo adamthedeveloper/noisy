@@ -46,6 +46,7 @@ group :test, :development do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'faker'
+  gem 'fixture_builder'
   gem 'machinist', "1.0.6"
   gem 'rspec'
   gem "rspec-rails", ">= 2.0.0.beta.22"

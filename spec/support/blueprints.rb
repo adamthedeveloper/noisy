@@ -27,4 +27,6 @@ end
 
 PurchaseItem.blueprint do
 
+  
+  
 end
