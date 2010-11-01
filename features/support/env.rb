@@ -9,6 +9,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 
 require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
 require 'cucumber/rails/world'
+require 'cucumber/rails/rspec'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
 
@@ -22,7 +23,7 @@ fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.
 Fixtures.create_fixtures(fixtures_folder, fixtures)
 
 Webrat.configure do |config|
-  config.mode = :rack #:rails
+  config.mode = :rails
   config.open_error_files = false # Set to true if you want error pages to pop up in the browser
 end
 

@@ -51,5 +51,6 @@ group :test, :development do
   gem 'machinist', "1.0.6"
   gem 'rspec'
   gem "rspec-rails", ">= 2.0.0.beta.22"
+  gem 'selenium-client'
   gem 'webrat', ">= 0.7.2"
 end

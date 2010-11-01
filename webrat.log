@@ -56,3 +56,90 @@ REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "accou
 REQUESTING PAGE: GET / with {} and HTTP headers {}
 REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
 REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: POST /accounts/sign_in with {"_snowman"=>"\xE2\x98\x83", "account"=>{"email"=>"user@no_profile.com", "password"=>"password", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/accounts/sign_in"}

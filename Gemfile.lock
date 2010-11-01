@@ -121,6 +121,7 @@ GEM
       rspec (= 2.0.0.beta.22)
     ruby_parser (2.0.5)
       sexp_processor (~> 3.0)
+    selenium-client (1.2.18)
     sexp_processor (3.0.5)
     sinatra (1.0)
       rack (>= 1.0)
@@ -163,6 +164,7 @@ DEPENDENCIES
   rspec
   rspec-rails (>= 2.0.0.beta.22)
   ruby_parser
+  selenium-client
   sinatra (= 1.0)
   warden
   webrat (>= 0.7.2)
