@@ -23,7 +23,7 @@ fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.
 Fixtures.create_fixtures(fixtures_folder, fixtures)
 
 Webrat.configure do |config|
-  config.mode = :rails
+  config.mode = :rack
   config.open_error_files = false # Set to true if you want error pages to pop up in the browser
 end
 
