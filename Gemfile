@@ -16,6 +16,7 @@ gem 'paperclip'
 gem 'rails-footnotes'
 gem 'ruby_parser'
 gem "sinatra", "= 1.0"
+gem 'unicorn'
 gem 'warden'
 
 # Use unicorn as the web server
