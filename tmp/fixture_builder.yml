@@ -1,5 +1,6 @@
 --- 
-db/schema.rb: b0ddfd8579deb59b50bdbe0e403f73bf
-/Users/user/projects/noisebytes/db/seeds/000_accounts.rb: e45709e8967b9d1cbd6664c13670d8a6
+db/schema.rb: 131857e1f51a542aef780b7d1a18cac5
+/Users/user/projects/noisebytes/db/seeds/000_accounts.rb: c23314d0e8e74d69f89f3f56ef8848fb
+/Users/user/projects/noisebytes/db/seeds/005_billing_addresses.rb: f3a75c8930a6de65eeca05a5d6ddcb67
 spec/support/fixture_builder.rb: f6aedb8f11050aedf088064b18bfd833
 spec/support/blueprints.rb: 7e75db41e8c0bfa9a2b01650e31700ce

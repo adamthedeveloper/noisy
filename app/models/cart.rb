@@ -68,7 +68,7 @@ class Cart < ActiveRecord::Base
     end
 
     if !address.nil?
-      address.addresses.build(params)
+      address.build_address(params)
       address.save!
       self.save!
     end

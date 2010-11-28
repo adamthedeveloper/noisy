@@ -57,7 +57,7 @@ describe Cart do
         :phone => '(510)812-2011'
       }
     )
-    @cart.billing_address.addresses.first.phone.should == '(510)812-2011'
+    @cart.billing_address.address.phone.should == '(510)812-2011'
   end
 
   it "should allow us to save a shipping address" do
@@ -73,7 +73,7 @@ describe Cart do
         :phone => '(510)812-2011'
       }
     )
-    @cart.shipping_address.addresses.first.phone.should == '(510)812-2011'
+    @cart.shipping_address.address.phone.should == '(510)812-2011'
   end
 end
 
@@ -111,8 +111,8 @@ describe "Non-empty cart" do
     order = @account.orders.last
     order.purchase_items.count.should == 3
     order.subtotal.should == 15
-    order.billing_address.addresses.first.phone.should == '(510)812-2011'
-    order.shipping_address.addresses.first.phone.should == '(510)812-2011'
+    order.billing_address.address.phone.should == '(510)812-2011'
+    order.shipping_address.address.phone.should == '(510)812-2011'
   end
 
 end
