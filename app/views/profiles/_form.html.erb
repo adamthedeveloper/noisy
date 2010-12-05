@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+<div id="box_1" class="round dark-border taller">
+  <%= image_tag @profile.avatar.url(:thumb), :class => "avatar slightly-round" if @profile.avatar %>
+  <div class="field">
+    <div id="find_avatar" class="buttonify large shadow bottom-margin">Choose an Avatar</div><div id="selected_avatar"></div>
+  </div>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -20,10 +24,6 @@
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
-  </div>
-  <div class="field">
     <%= f.label :city %><br />
     <%= f.text_field :city %>
   </div>
@@ -31,9 +31,13 @@
     <%= f.label :state %><br />
     <%= f.text_field :state %>
   </div>
+</div>
+<div id="box_2" class="round dark-border taller">
+
+
   <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
   </div>
   <div class="field">
     <%= f.label :occupation %><br />
@@ -48,6 +52,27 @@
     <%= f.text_field :website %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :id => "profile_submit", :class => "shadow" %>
+    <%= f.file_field :avatar, :id => "avatar_actual", :class => "see-through" %>
   </div>
 <% end %>
+</div>
+
+<h2>Edit Your Login Credentials</h2>
+<%= render :template => '/devise/registrations/edit'%>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      var avatarActual = $('#avatar_actual');
+
+      avatarActual.live('change', function(){
+         var selectedAvatar = $('#selected_avatar');
+         selectedAvatar.html("You've Selected: "+ avatarActual.val());
+         selectedAvatar.show();
+      });
+
+      $('#find_avatar').click(function(){
+            avatarActual.trigger('click');
+      });
+  });
+</script>

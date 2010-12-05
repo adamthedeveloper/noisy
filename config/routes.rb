@@ -1,5 +1,5 @@
 Noisebytes::Application.routes.draw do
-  devise_for :accounts
+  devise_for :accounts, :controllers => {:registrations => 'registrations', :profiles => 'profiles'}
   resources :carts, :has_many => :purchase_items
   resources :index
   resources :orders, :has_many => :purchase_items

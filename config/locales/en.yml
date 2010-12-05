@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  devise:
+    registrations:
+      account:
+        problem_creating_account: "Ooops! Was your email address ok? Did your passwords match?"

@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font: Lucida Grande;
     color: #ffffff;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
 body {
     background: url(/images/bg.jpg) no-repeat;
@@ -34,3 +34,202 @@ body {
     height: 150px;
     float: right;
 }
+
+.shadow {
+    -moz-box-shadow: 1px 1px 3px 1px #2C475F;
+    -webkit-box-shadow: 1px 1px 2px 1px #2C475F;
+    box-shadow: 1px 1px 2px 1px #2C475F;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#2C475F')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#2C475F');
+}
+
+.dark-border {
+    border: 1px solid #476F93;
+}
+
+p.notice, p.alert {
+    display: block;
+    width: 785px;
+    height: 22px;
+    background-color: #FAFFBD;
+    padding: 7px;
+    font-size: 18px;
+}
+
+p.alert{
+    color: red;
+}
+
+p.notice {
+    color: #222711;
+}
+
+.round {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.slightly-round {
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.bottom-margin {
+    margin-bottom: 9px;
+}
+
+.see-through{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.buttonify {
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #324C64;
+}
+
+.small {
+    width: 40px;
+}
+
+.medium {
+    width: 80px;
+}
+
+.large {
+    width: 140px;
+}
+
+
+/****************************************
+Forms
+*****************************************/
+input[type=text] {
+    font-size: 20px;
+    width: 250px;
+}
+
+input[type=password] {
+    font-size: 20px;
+    width: 250px;
+}
+
+input {
+    color: #222711;
+    background-color: white;
+    margin: 5px 0 10px 0;
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+    border-style:none;
+    padding: 5px;
+}
+
+input[type=submit] {
+    background-color: #9CC74C;
+    font-size:18px;
+    color: #222711;
+    margin-left: 189px;
+}
+
+input[type=submit]#profile_submit {
+    background-color: #9CC74C;
+    font-size:18px;
+    color: #222711;
+    margin-left: 131px;
+}
+
+
+label {
+}
+
+textarea {
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+    height: 120px;
+    width: 256px;
+    color: #222711;
+    font-size: 16px;
+}
+/****************************************
+End Forms
+*****************************************/
+
+/****************************************
+Account related styles
+*****************************************/
+#box_1 {
+    background-color: #39799f;
+    width: 300px;
+    height: 300px;
+    padding:10px 10px 10px 49px;
+    float:left;
+    margin-bottom: 20px;
+}
+#box_1 h2 {
+    color:#bee795;
+    font-size: 30px;
+}
+#box_2 {
+    background-color: #39799f;
+    width: 300px;
+    height: 300px;
+    padding:10px 10px 10px 49px;
+    float:right;
+}
+#box_3 {
+    background-color: #39799f;
+    width: 300px;
+    height: auto;
+    padding:10px 10px 10px 49px;
+    float:left;
+}
+#box_2 h2 {
+    color:#bee795;
+    font-size: 30px;
+}
+#box_container {
+    clear:left;
+    width: 800px;
+    height: 800px;
+}
+
+#box_1.taller, #box_2.taller {
+    height: 500px;
+}
+
+#box_container h2 {
+    color: #B6CC6B;
+    margin-bottom: 20px;
+    clear:left;
+}
+
+#selected_avatar {
+    height: 17px;
+    display: none;
+    font-size: 10px;
+    font-style: italic;
+    color: #222711;
+}
+
+img.avatar {
+    border: 5px solid white;
+}
+
+
+
+/****************************************
+End Account related styles
+*****************************************/
+
+
+
+
+
+
+
+
+
