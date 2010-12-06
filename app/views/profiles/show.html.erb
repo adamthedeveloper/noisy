@@ -1,71 +1,109 @@
 <p id="notice"><%= notice %></p>
+<div id="profile_container">
+  <div id="profile_left">
+    <p>
+      <%= image_tag @profile.avatar.url(:thumb), :class => "avatar slightly-round" %>
+    </p>
 
-<p>
-  <b>First name:</b>
-  <%= @profile.first_name %>
-</p>
+    <div id="blip_box">
+      <h3>LAST <span class="text-light-blue">BLIP</span></h3>
 
-<p>
-  <b>Last name:</b>
-  <%= @profile.last_name %>
-</p>
+      <p>
+        <span class="text-light-yellow text-small add-line-height">20/04/2010</span>
+      </p>
 
-<p>
-  <b>Bio:</b>
-  <%= @profile.bio %>
-</p>
+      <p class="add-10px-bottom-margin text-small add-line-height">
+        <%= Faker::Lorem.paragraph[0..100] %>...
+      </p>
 
-<p>
-  <b>City:</b>
-  <%= @profile.city %>
-</p>
+      <p>
+        <a href="#">
+          <div class="read-more"></div>
+        </a>
+      </p>
 
-<p>
-  <b>State:</b>
-  <%= @profile.state %>
-</p>
+      <p>
+      <div class="vertical-navigation">
+          <%= image_tag '/images/line-long.png', :class => "button-wrap-rule" %>
+          <div class="navlet">
+            <%= image_tag "/images/speaker.png" %>
+            <a href="#">My Sound <span class='text-light-blue'>Library</span></a>
+          </div>
+          <%= image_tag '/images/line-long.png', :class => "button-wrap-rule" %>
+          <div class="navlet">
+            <%= image_tag "/images/profile-bubble.png" %>
+            <a href="<%= edit_profile_path(@profile) %>">My <span class='text-light-blue'>Account</span></a>
+          </div>
+          <%= image_tag '/images/line-long.png', :class => "button-wrap-rule" %>
+          <div class="navlet">
+            <%= image_tag "/images/clip-board.png" %>
+            <a href="#">My <span class="text-light-blue">Orders</span></a>
+          </div>
+          <%= image_tag '/images/line-long.png', :class => "button-wrap-rule" %>
+      </div>
+      </p>
 
-<p>
-  <b>Avatar:</b>
-  <%= image_tag @profile.avatar.url(:thumb) %> <br />
-  <%= image_tag @profile.avatar.url(:medium) %>
-</p>
+    </div>
+  </div>
 
-<p>
-  <b>Avatar file name:</b>
-  <%= @profile.avatar_file_name %>
-</p>
+  <div id="profile_center">
+    <h3>Member Profile</h3>
+    <h2 class="text-light-blue"><%= h @profile.full_name %></h2>
 
-<p>
-  <b>Avatar content type:</b>
-  <%= @profile.avatar_content_type %>
-</p>
+    <%= image_tag '/images/line-long.png', :class => "rule" %>
 
-<p>
-  <b>Avatar file size:</b>
-  <%= @profile.avatar_file_size %>
-</p>
+    <p>
+      <span class="labelize dark-blue text-small">Member since:</span>
+      <%= @profile.created_at.strftime("%B %Y") %>
+    </p>
 
-<p>
-  <b>Avatar updated at:</b>
-  <%= @profile.avatar_updated_at %>
-</p>
+    <p>
+      <span class="labelize text-small">Sounds Styles:</span>
+      <%= h Faker::Lorem.words(20).to_s %>
+    </p>
 
-<p>
-  <b>Occupation:</b>
-  <%= @profile.occupation %>
-</p>
+    <p>
+      <span class="labelize dark-blue text-small">Occupation:</span>
+      <%= h @profile.occupation %>
+    </p>
 
-<p>
-  <b>Company:</b>
-  <%= @profile.company %>
-</p>
+    <p>
+      <span class="labelize dark-blue text-small">Company:</span>
+      <%= h @profile.company %>
+    </p>
 
-<p>
-  <b>Website:</b>
-  <%= @profile.website %>
-</p>
+    <p>
+      <span class="labelize dark-blue text-small">Website:</span>
+      <%= h @profile.website %>
+    </p>
+
+    <p>
+    <span class="labelize dark-blue text-small">Location:</span>
+    <%= h @profile.location %>
+    </p>
+
+    <p>
+      <span class="labelize dark-blue text-small">Biography:</span>
+      <%= h @profile.bio %>
+    </p>
+
+    <%= image_tag '/images/line-long.png', :class => "rule" %>
+
+    <h3 class="add-bottom-margin">Fans</h3>
+    <table>
+      <tr>
+        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="profile_right">
 
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+  </div>
+</div>
+

@@ -17,4 +17,16 @@ class RegistrationsController < Devise::RegistrationsController
       redirect_to new_account_session_path
     end
   end
+
+  # PUT /resource
+  def update
+    @profile = Profile.find_by_account_id(current_account.id)
+    if resource.update_with_password(params[resource_name])
+      set_flash_message :notice, :updated
+      sign_in resource_name, resource, :bypass => true
+    else
+      clean_up_passwords(resource)
+    end
+    redirect_to edit_profile_path(@profile)
+  end
 end

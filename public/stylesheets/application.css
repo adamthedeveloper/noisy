@@ -14,7 +14,7 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 1000px;
+    width: 800px;
     height: 1000px;
     text-align: left;
 }
@@ -25,14 +25,42 @@ body {
 
 #logo {
     width: 45%;
-    height: 150px;
+    height: 100px;
     float:left;
 }
 
 #header_controls {
     width: 45%;
-    height: 150px;
+    height: auto;
     float: right;
+}
+
+#header_controls div.buttonize {
+    margin-top: 10px;
+    background-color: #446898;
+    width: 46px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-align:center;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+#header_controls div.buttonize a {
+    text-decoration:none;
+    font-size: 12px;
+}
+
+#header_rule {
+    width: 100%;
+    margin: 20px 0 20px 0;
 }
 
 .shadow {
@@ -85,11 +113,20 @@ p.notice {
     opacity: 0;
 }
 
-.buttonify {
+.buttonize {
     -moz-border-radius: 2px;
     border-radius: 3px;
     padding: 10px;
     background-color: #324C64;
+}
+
+span.labelize {
+    padding: 3px 5px 3px 5px;
+    background-color: #335771;
+}
+
+span.dark-blue {
+    background-color: #213758;
 }
 
 .small {
@@ -104,7 +141,81 @@ p.notice {
     width: 140px;
 }
 
+.text-light-blue {
+    color: #BADDFC;
+}
 
+.text-light-yellow {
+    color: #FFFED8;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.add-10px-top-margin {
+    margin-top: 10px;
+}
+
+.add-10px-bottom-margin {
+    margin-bottom: 10px;
+}
+
+.add-line-height {
+    line-height: 150%;
+}
+
+h2, h3 {
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+div.vertical-navigation {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+div.vertical-navigation .button-wrap-rule {
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+div.vertical-navigation a {
+    text-decoration: none;
+    margin: 0 0 0 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    line-height: 225%;
+}
+div.vertical-navigation div.navlet {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-image: url('/images/navlet-bg.png');
+    background-position: 0px 0px;
+}
+div.vertical-navigation div.navlet:hover {
+    background-position: 0px 30px;
+}
+
+.navlet img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
 /****************************************
 Forms
 *****************************************/
@@ -219,13 +330,74 @@ img.avatar {
     border: 5px solid white;
 }
 
+#profile_container {
+    width: 100%;
+}
+
+#profile_left {
+    width: 275px;
+    float: left;
+}
+
+#profile_center {
+    width: 300px;
+    float: left;
+}
+
+#profile_center p {
+    margin-bottom: 10px;
+    line-height: 150%;
+    font-size: 12px;
+}
+
+#profile_right {
+    width: 200px;
+    float:right;
+}
+
+img.rule {
+    margin: 20px 0 10px;
+    width: 300px;
+    height: 2px;
+}
 
 
 /****************************************
 End Account related styles
 *****************************************/
 
+/****************************************
+Blips
+*****************************************/
+.read-more {
+    background-image: url('/images/read-more.png');
+    background-position: 0px 0px;
+    height: 29px;
+    width: 100px;
+}
 
+.read-more:hover {
+    background-position: 0px 29px;
+}
+
+#blip_box {
+    width: 212px;
+    height: auto;
+}
+
+#blip_box h3 {
+
+    font-variant: small-caps;
+    margin: 20px 0 20px;
+}
+
+
+
+
+
+/****************************************
+End Blips
+*****************************************/
 
 
 

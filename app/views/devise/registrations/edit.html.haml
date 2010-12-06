@@ -1,5 +1,5 @@
 %div{:id => "box_3", :class => "round dark-border"}
-  = form_for(@account, :url => edit_account_registration_path(@account), :html => { :method => :put, :multipart => true }) do |f|
+  = form_for(@account, :url => {:controller => :registrations, :action => :update}, :html => { :method => :put, :multipart => true }) do |f|
     %p
       = f.label :email
       %br/
