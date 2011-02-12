@@ -49,6 +49,12 @@ GEM
       activesupport (>= 2.3.0)
       database_cleaner (~> 0.5.0)
     builder (2.1.2)
+    capistrano (2.5.19)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.0.0)
     configuration (1.1.0)
     cucumber (0.9.1)
       builder (~> 2.1.2)
@@ -69,6 +75,7 @@ GEM
       term-ansicolor (~> 1.0.5)
       trollop (~> 1.16.2)
     haml (3.0.21)
+    highline (1.6.1)
     hpricot (0.8.2)
     i18n (0.4.1)
     json (1.4.6)
@@ -83,6 +90,13 @@ GEM
       treetop (>= 1.4.5)
     mime-types (1.16)
     mysql (2.8.1)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.1.0)
+    net-ssh-gateway (1.0.1)
+      net-ssh (>= 1.99.1)
     nokogiri (1.4.3.1)
     paperclip (2.3.3)
       activerecord
@@ -151,6 +165,7 @@ DEPENDENCIES
   awesome_print
   aws-s3
   blueprints
+  capistrano
   cucumber
   cucumber-rails
   devise (~> 1.2.0)!
