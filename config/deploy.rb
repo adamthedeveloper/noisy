@@ -37,7 +37,7 @@ role :db,  "127.0.0.1", :primary => true # This is where Rails migrations will r
 # Bundler
 namespace :bundle do
   task :install, :roles => :app do
-    run("cd #{current_release} && bundle install")
+    run("cd #{current_release} && gem install bundler && bundle install")
   end
 end
 
