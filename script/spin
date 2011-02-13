@@ -1,2 +1,2 @@
 #!/bin/sh
-unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/unicorn.rb -l 127.0.0.1:8080
+unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/production.rb -l 127.0.0.1:8080
