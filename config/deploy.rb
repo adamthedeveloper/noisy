@@ -68,11 +68,11 @@ namespace :deploy do
 
   namespace :nginx do
     task :start do
-      run("/usr/local/nginx/sbin/nginx -c #{current_release}/config/nginx/nginx.conf")
+      sudo("/usr/local/nginx/sbin/nginx -c #{current_release}/config/nginx/nginx.conf")
     end
 
     task :stop do
-      run("kill  `ps -ef | grep 'nginx' | grep 'master' | awk '{pring $2}'`")
+      sudo("kill  `ps -ef | grep 'nginx' | grep 'master' | awk '{pring $2}'`")
     end
 
     task :restart do
