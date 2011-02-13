@@ -34,7 +34,14 @@ role :app, "127.0.0.1"                          # This may be the same as your `
 role :db,  "127.0.0.1", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
+# Bundler
+namespace :bundle do
+  task :install, :roles => :app do
+    run("cd #{current_release} && bundle install")
+  end
+end
 
+after 'deploy:update', 'bundle:install'
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need

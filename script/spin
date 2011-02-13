@@ -1,2 +1,2 @@
 #!/bin/sh
-/Users/user/.rvm/gems/ruby-1.9.2-rc2@noisebytes/bin/unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/unicorn.rb -l 127.0.0.1:8080
+unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/unicorn.rb -l 127.0.0.1:8080
