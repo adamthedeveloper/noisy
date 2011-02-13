@@ -79,6 +79,10 @@ GEM
       term-ansicolor (~> 1.0.5)
       trollop (~> 1.16.2)
     haml (3.0.21)
+    heroku (1.17.10)
+      json (~> 1.4.6)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     highline (1.6.1)
     hpricot (0.8.2)
     i18n (0.4.1)
@@ -126,6 +130,8 @@ GEM
       rake (>= 0.8.3)
       thor (~> 0.14.0)
     rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
     rspec (2.0.0.beta.22)
       rspec-core (= 2.0.0.beta.22)
       rspec-expectations (= 2.0.0.beta.22)
@@ -177,6 +183,7 @@ DEPENDENCIES
   faker
   fixture_builder
   haml
+  heroku
   hpricot
   json
   launchy

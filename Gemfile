@@ -11,6 +11,7 @@ gem 'cijoe'
 gem 'cucumber'
 gem 'devise', '~>1.2.0', :git => 'git://github.com/plataformatec/devise.git'
 gem 'haml'
+gem 'heroku'
 gem 'hpricot'
 gem "json"
 gem 'mysql'
