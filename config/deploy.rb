@@ -48,6 +48,25 @@ end
 
 after 'deploy:update', 'bundle:install'
 
+namespace :deploy do
+  task :start do
+    run("cd #{current_release} && unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/production.rb -l 127.0.0.1:8080")
+  end
+
+  task :stop do
+    run("kill -QUIT `ps -ef | grep unicorn | grep master | awk '{print $2}'`")
+  end
+
+  task :restart do
+    puts "*"*50
+    puts "Restarting Unicorns..."
+    deploy.stop
+    deploy.start
+    puts "Done"
+    puts "*"*50
+  end
+end
+
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
