@@ -1,3 +1,2 @@
 #!/bin/sh
-/Users/user/apps/Noisy/current/script/process/spawner \
 unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/unicorn.rb -l 127.0.0.1:8080
