@@ -50,7 +50,7 @@ after 'deploy:update', 'bundle:install'
 
 namespace :deploy do
   task :start do
-    run("cd #{current_release} && unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/production.rb -l 127.0.0.1:8080")
+    run("cd #{current_release} && unicorn_rails -c /Users/user/apps/Noisy/current/config/unicorn/production.rb -l 127.0.0.1:8080 -D")
   end
 
   task :stop do
