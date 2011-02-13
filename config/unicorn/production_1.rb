@@ -24,20 +24,20 @@ APP_ROOT = Dir.pwd.gsub(/\/config*.+$/, '')
 working_directory APP_ROOT
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/.sock", :backlog => 64
+listen "/tmp/8080.sock", :backlog => 64
 listen 8080, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid(APP_ROOT + '/tmp/unicorn.pid')
+pid(APP_ROOT + '/tmp/unicorn1.pid')
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path(APP_ROOT + '/log/unicorn.stderr.log')
-stdout_path(APP_ROOT + '/log/unicorn.stdout.log')
+stderr_path(APP_ROOT + '/log/unicorn1.stderr.log')
+stdout_path(APP_ROOT + '/log/unicorn1.stdout.log')
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
