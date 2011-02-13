@@ -55,6 +55,10 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.0.0)
+    choice (0.1.4)
+    cijoe (0.9.1)
+      choice
+      sinatra
     configuration (1.1.0)
     cucumber (0.9.1)
       builder (~> 2.1.2)
@@ -166,6 +170,7 @@ DEPENDENCIES
   aws-s3
   blueprints
   capistrano
+  cijoe
   cucumber
   cucumber-rails
   devise (~> 1.2.0)!
