@@ -6,3 +6,6 @@ tmp/**/*
 .idea
 webrat.log
 config/database.yml
+config/unicorn/*.rb
+config/nginx/*.conf
+config/*.yml

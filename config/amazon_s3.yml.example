@@ -1,0 +1,23 @@
+s3_credentials:
+  development:
+    access_key_id: AKIAICZN4WR6VE3LVDTQ
+    secret_access_key: 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
+    bucket: noisebytes_development
+  test:
+    access_key_id: AKIAICZN4WR6VE3LVDTQ
+    secret_access_key: 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
+    bucket: noisebytes_test
+  production:
+    access_key_id: AKIAICZN4WR6VE3LVDTQ
+    secret_access_key: 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
+    bucket: noisebytes_production
+
+default:
+  url:
+  path: /:class/:id/:attachment/:style.:extension
+  s3_permissions: public_read
+  s3_protocol: http
+  s3_host_alias:
+  storage: s3
+  
+  
