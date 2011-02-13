@@ -66,13 +66,28 @@ namespace :deploy do
     puts "*"*50
   end
 
+  namespace :nginx do
+    task :start do
+      run("/usr/local/nginx/sbin/nginx -c #{current_release}/config/nginx/nginx.conf")
+    end
+
+    task :stop do
+      run("kill  `ps -ef | grep 'nginx' | grep 'master' | awk '{pring $2}'`")
+    end
+
+    task :restart do
+      nginx.stop
+      nginx.start
+    end
+  end
+
   task :hot do
     puts "*"*50
     puts "Doing a hot deploy..."
     deploy.update
     commands = <<-SH
       cd #{current_release} && \
-      unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 10.0.0.1:8080 -E production -D && \
+      unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.1:8001 -E production -D && \
       echo "reroute" > public/system/reroute.txt && \
       kill -QUIT `ps -ef | grep unicorn | grep master | grep "127.0.0.1" | awk '{print $2}'` && \
       unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.1:8080 -E production -D && \
