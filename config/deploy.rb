@@ -50,11 +50,11 @@ after 'deploy:update', 'bundle:install'
 
 namespace :deploy do
   task :start do
-    run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.1:8080 -e production -D")
+    run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.1:8080 -E production -D")
   end
 
   task :stop do
-    run("kill -QUIT `ps -ef | grep unicorn | grep master | grep '127.0.0.1:80880' | awk '{print $2}'`")
+    run("kill -QUIT `ps -ef | grep unicorn | grep master | grep '127.0.0.1:8080' | awk '{print $2}'`")
   end
 
   task :restart do
@@ -87,11 +87,11 @@ namespace :deploy do
     deploy.update
     commands = <<-SH
       cd #{current_release} && \
-      unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.100:8001 -E production -D && \
+      unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 192.168.1.2:8001 -E production -D && \
       echo "reroute" > public/system/reroute.txt && \
       kill -QUIT `ps -ef | grep unicorn | grep master | grep "127.0.0.1:8080" | awk '{print $2}'` && \
       unicorn_rails -c #{current_release}/config/unicorn/production.rb -l 127.0.0.1:8080 -E production -D && \
-      kill -QUIT `ps -ef | grep unicorn | grep master | grep "127.0.0.100:8001" | awk '{print $2}'` && \
+      kill -QUIT `ps -ef | grep unicorn | grep master | grep "192.168.1.2:8001" | awk '{print $2}'` && \
       rm public/system/reroute.txt
     SH
     run(commands)
