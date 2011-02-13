@@ -1,3 +1,8 @@
+set :rvm_type, :user
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "rvm/capistrano"
+set :rvm_ruby_string, 'ruby-1.9.2@noisebytes'
+
 # User
 #set :user, "user"
 set :use_sudo, false
@@ -37,7 +42,7 @@ role :db,  "127.0.0.1", :primary => true # This is where Rails migrations will r
 # Bundler
 namespace :bundle do
   task :install, :roles => :app do
-    run("cd #{current_release} && gem install bundler && bundle install")
+    run("cd #{current_release} && bundle install")
   end
 end
 
