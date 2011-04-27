@@ -1,33 +1,31 @@
 --- 
 user_no_profile_com: 
   authentication_token: 
-  created_at: 2010-11-28 01:09:40 Z
+  created_at: 2011-04-27 03:30:26 Z
   current_sign_in_at: 
   current_sign_in_ip: 
   email: user@no_profile.com
-  encrypted_password: $2a$10$kYHgiwg4Ddo2VShgwp139O0MC9en8qYnohiaWcwgPABBqrZnLCTv6
-  id: 29
+  encrypted_password: $2a$10$3DdTsf3/4OLWlifswxhQb.chsVcQe0UFOX0NxwyyacZP6K0Eegf.6
+  id: 1
   last_sign_in_at: 
   last_sign_in_ip: 
-  password_salt: ""
   remember_created_at: 
   remember_token: 
   reset_password_token: 
   sign_in_count: 0
-  updated_at: 2010-11-28 01:09:40 Z
+  updated_at: 2011-04-27 03:30:26 Z
 alameda_example_com: 
   authentication_token: 
-  created_at: 2010-11-28 01:09:40 Z
+  created_at: 2011-04-27 03:30:26 Z
   current_sign_in_at: 
   current_sign_in_ip: 
   email: alameda@example.com
-  encrypted_password: $2a$10$m952am8hM7AZ4QbYJniLh.6iUHTooFhTQbAlcgw5SYLTwvoO6dX02
-  id: 30
+  encrypted_password: $2a$10$Y3PMfLYKWA6r3IpVMOuCDuP7XR68zx13swtzGNy/gbMh9N0rO1CGu
+  id: 2
   last_sign_in_at: 
   last_sign_in_ip: 
-  password_salt: ""
   remember_created_at: 
   remember_token: 
   reset_password_token: 
   sign_in_count: 0
-  updated_at: 2010-11-28 01:09:40 Z
+  updated_at: 2011-04-27 03:30:26 Z

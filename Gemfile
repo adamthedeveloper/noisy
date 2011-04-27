@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+source 'http://github.com'
 
 gem 'rails', '3.0.0.rc'
 
@@ -9,7 +10,7 @@ gem 'aws-s3'
 gem 'capistrano'
 gem 'cijoe'
 gem 'cucumber'
-gem 'devise', '~>1.2.0', :git => 'git://github.com/plataformatec/devise.git'
+gem 'devise'
 gem 'haml'
 gem 'heroku'
 gem 'hpricot'
