@@ -3,5 +3,13 @@
     %img{:src => '/images/logo.png'}
   #header_controls
     #login_box
-      %div{:class => "buttonize shadow right"}= link_to_sign_in
+      #login_message
+        Welcome Adam, you have 1 new message
+      #login_button
+        %div{:class => "buttonize shadow"}= link_to_sign_in
+      %div{:class => "clear-all"}
+      #search
+        = form_tag('/') do
+          = text_field_tag('search_keywords', 'Enter keyword(s)')
+          = submit_tag "Search",{:class => "shadow"}
   %img{:src => '/images/line-long.png', :id => 'header_rule'}

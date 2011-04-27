@@ -14,7 +14,7 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 800px;
+    width: 965px;
     height: 1000px;
     text-align: left;
 }
@@ -24,18 +24,18 @@ body {
 }
 
 #logo {
-    width: 45%;
+    width: 220px;
     height: 100px;
     float:left;
 }
 
 #header_controls {
-    width: 45%;
+    /*width: 45%;*/
     height: auto;
     float: right;
 }
 
-#header_controls div.buttonize {
+div.buttonize {
     margin-top: 10px;
     background-color: #446898;
     width: 46px;
@@ -43,6 +43,40 @@ body {
     padding-top: 5px;
     padding-bottom: 8px;
     text-align:center;
+}
+
+div.buttonize a {
+    text-decoration:none;
+    font-size: 12px;
+}
+
+div.green-background {
+    background-color: #87c660;
+}
+div.green-background * {
+    color: #202714;
+}
+
+#login_message, #login_button {
+    float: left;
+}
+
+#login_message {
+    width: 340px;
+    margin: 15px 0 0 0;
+}
+
+#login_button {
+    float: left;
+}
+
+#header_controls #search {
+    float:right;
+    margin: 55px 0 0;
+}
+
+#header_controls #search input[type=submit] {
+    margin-left: 0;
 }
 
 .right {
@@ -53,20 +87,15 @@ body {
     float: left;
 }
 
-#header_controls div.buttonize a {
-    text-decoration:none;
-    font-size: 12px;
-}
-
 #header_rule {
-    width: 100%;
+    /*width: 100%;*/
     margin: 20px 0 20px 0;
 }
 
 .shadow {
     -moz-box-shadow: 1px 1px 3px 1px #2C475F;
     -webkit-box-shadow: 1px 1px 2px 1px #2C475F;
-    box-shadow: 1px 1px 2px 1px #2C475F;
+    box-shadow: 1px 1px 1 #2C475F;
     /* For IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#2C475F')";
     /* For IE 5.5 - 7 */
@@ -265,6 +294,21 @@ textarea {
     color: #222711;
     font-size: 16px;
 }
+
+img.h_divider {
+    height: 4px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+span.explanation {
+    width: 100%;
+    margin: 0;
+}
+
+.bluer {
+    color: #6496AE;
+}
 /****************************************
 End Forms
 *****************************************/
@@ -401,7 +445,105 @@ End Blips
 
 
 
+/****************************************
+Home page
+*****************************************/
+#slideshow_categories_newest_members * {
+    float: left;
+}
+#slideshow_categories_newest_members {
+    width: 100%;
+}
+#slideshow_categories_newest_members #slideshow {
+    width: 718px;
+    height: 344px;
+}
+#slideshow_categories_newest_members #categories_newest_members {
+    width: 221px;
+    margin: 0 0 0 20px;
+}
+#slideshow_categories_newest_members #categories {
+    background: url(/images/box-categories.png) no-repeat;
+    width: 211px;
+    height: 218px;
+}
+#slideshow_categories_newest_members #newest_members {
+    background: url(/images/box-newest-members.png) no-repeat;
+    width: 211px;
+    height: 143px;
+}
+#slideshow img {
+    border: 5px solid #FFFFFF;
+}
 
+#featured_sounds_most_popular_news {
+    margin: 10px 0 0 0;
+}
 
+#featured_sounds_most_popular_news * {
+    float: left;
+    width: 310px;
+    height: 146px;
+}
+#featured_sounds_most_popular_news #featured_sounds {
+    background: url(/images/box-featured-sounds.png) no-repeat;
+    margin: 0 0 0 0;
+}
+#featured_sounds_most_popular_news #most_popular {
+    background: url(/images/box-most-popular.png) no-repeat;
+    margin: 0 0 0 10px;
+}
+#featured_sounds_most_popular_news #news {
+    background: url(/images/box-news.png) no-repeat;
+    margin: 0 0 0 10px;
+}
+#join_us_download_create {
+    margin: 10px 0 0 0;
+}
+#join_us_download_create div#join_us,
+#join_us_download_create div#download,
+#join_us_download_create div#create {
+    float:left;
+    width:310px;
+    height: 200px;
+}
+#join_us_download_create #join_us {
+    background: url(/images/icon-join.png) no-repeat;
+    margin: 0 0 0 0;
+}
+#join_us_download_create #download {
+    background: url(/images/icon-download.png) no-repeat;
+    margin: 0 0 0 10px;
+}
+#join_us_download_create #create {
+    background: url(/images/icon-create.png) no-repeat;
+    margin: 0 0 0 10px;
+}
+#join_us_download_create span {
+    margin: 10px 0 0 75px;
+    display: block;
+}
+#join_us_download_create span.explanation {
+    margin: 0;
+}
+#join_us_download_create img.h_divider {
+    margin: 20px 0;
+}
 
+/****************************************
+End Home page
+*****************************************/
+
+/****************************************
+Footer
+*****************************************/
+#footer {
+    margin: 55px 0 0 0;
+    width: 100%;
+    float: left;
+}
+
+/****************************************
+End Footer
+*****************************************/
 
