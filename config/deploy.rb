@@ -92,7 +92,7 @@ namespace :deploy do
   end
 
   task :stop do
-    run("kill -QUIT `ps -ef | grep unicorn | grep master | grep '#{unicorn_host}' | awk '{print $2}'`")
+    run("kill -QUIT `ps -ef | grep unicorn | grep master | grep '#{unicorn_host}' | awk '{print $2}'` && rm -rf #{current_release}/tmp/pids")
   end
 
   task :restart do

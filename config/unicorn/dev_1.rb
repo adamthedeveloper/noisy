@@ -29,13 +29,13 @@ listen 9190, :tcp_nopush => true
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid(APP_ROOT + '/tmp/unicorn_dev_1.pid')
+pid('/tmp/unicorn_dev_1.pid')
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path(APP_ROOT + '/log/unicorn_dev_1.stderr.log')
-stdout_path(APP_ROOT + '/log/unicorn_dev_1.stdout.log')
+stderr_path('/var/log/unicorn_dev_1.stderr.log')
+stdout_path('/var/log/unicorn_dev_1.stdout.log')
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
