@@ -12,7 +12,8 @@
 # more will usually help for _short_ waits on databases/caches.
 WORKERS_PER_CORE = 2
 # To find the number of cores on a mac:
-TOTAL_WORKERS = [4,(`/usr/sbin/system_profiler SPHardwareDataType | grep -i "total number of cores" | sed 's/[^0-9]//g'`.to_i*WORKERS_PER_CORE).round].max
+#TOTAL_WORKERS = [4,(`/usr/sbin/system_profiler SPHardwareDataType | grep -i "total number of cores" | sed 's/[^0-9]//g'`.to_i*WORKERS_PER_CORE).round].max
+TOTAL_WORKERS = 4
 worker_processes TOTAL_WORKERS
 # worker_processes 4
 
@@ -31,13 +32,13 @@ listen 8080, :tcp_nopush => true
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid(APP_ROOT + '/tmp/unicorn1.pid')
+pid(APP_ROOT + '/tmp/unicorn_production_1.pid')
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path(APP_ROOT + '/log/unicorn1.stderr.log')
-stdout_path(APP_ROOT + '/log/unicorn1.stdout.log')
+stderr_path(APP_ROOT + '/log/unicorn_production_1.stderr.log')
+stdout_path(APP_ROOT + '/log/unicorn_production_1.stdout.log')
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow

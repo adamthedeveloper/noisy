@@ -12,7 +12,8 @@
 # more will usually help for _short_ waits on databases/caches.
 WORKERS_PER_CORE = 2
 # To find the number of cores on a mac:
-TOTAL_WORKERS = [4,(`/usr/sbin/system_profiler SPHardwareDataType | grep -i "total number of cores" | sed 's/[^0-9]//g'`.to_i*WORKERS_PER_CORE).round].max
+#TOTAL_WORKERS = [4,(`/usr/sbin/system_profiler SPHardwareDataType | grep -i "total number of cores" | sed 's/[^0-9]//g'`.to_i*WORKERS_PER_CORE).round].max
+TOTAL_WORKERS = 4
 worker_processes TOTAL_WORKERS
 # worker_processes 4
 
@@ -24,20 +25,20 @@ APP_ROOT = Dir.pwd.gsub(/\/config*.+$/, '')
 working_directory APP_ROOT
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/9090.sock", :backlog => 64
-listen 9090, :tcp_nopush => true
+listen "/tmp/8081.sock", :backlog => 64
+listen 8081, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid(APP_ROOT + '/tmp/unicorn_2.pid')
+pid(APP_ROOT + '/tmp/unicorn_production_2.pid')
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path(APP_ROOT + '/log/unicorn2.stderr.log')
-stdout_path(APP_ROOT + '/log/unicorn2.stdout.log')
+stderr_path(APP_ROOT + '/log/unicorn_production_2.stderr.log')
+stdout_path(APP_ROOT + '/log/unicorn_production_2.stdout.log')
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow

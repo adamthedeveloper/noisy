@@ -34,10 +34,42 @@ set :deploy_to, "/Users/user/apps/Noisy"
 
 
 # Servers
-role :web, "127.0.0.1"                          # Your HTTP server, Apache/etc
-role :app, "127.0.0.1"                          # This may be the same as your `Web` server
-role :db,  "127.0.0.1", :primary => true # This is where Rails migrations will run
-#role :db,  "your slave db-server here"
+task :local do
+	role :web, "127.0.0.1"                          # Your HTTP server, Apache/etc
+	role :app, "127.0.0.1"                          # This may be the same as your `Web` server
+	role :db,  "127.0.0.1", :primary => true # This is where Rails migrations will run
+	#role :db,  "your slave db-server here"
+end
+
+task :prod do
+	role :web, "74.50.50.135"
+	role :app, "74.50.50.135"
+	role :db, "74.50.50.135", :primary => true
+	set :user, "webuser"
+	set :deploy_to, "/var/noisebytes/production"
+	set :scm_command, "/usr/bin/git"
+  set :unicorn_config, "production_1.rb"
+end
+
+task :stage do
+	role :web, "74.50.50.135"
+	role :app, "74.50.50.135"
+	role :db, "74.50.50.135", :primary => true
+	set :user, "webuser"
+	set :deploy_to, "/var/noisebytes/stage"
+  set :unicorn_config, "stage_1.rb"
+	set :scm_command, "/usr/bin/git"
+end
+
+task :dev do
+	role :web, "74.50.50.135"
+	role :app, "74.50.50.135"
+	role :db, "74.50.50.135", :primary => true
+	set :user, "webuser"
+	set :deploy_to, "/var/noisebytes/dev"
+  set :unicorn_config, "dev_1.rb"
+	set :scm_command, "/usr/bin/git"
+end
 
 # Bundler
 namespace :bundle do
