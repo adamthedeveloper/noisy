@@ -49,6 +49,8 @@ task :prod do
 	set :deploy_to, "/var/noisebytes/production"
 	set :scm_command, "/usr/bin/git"
   set :unicorn_config, "production_1.rb"
+  set :unicorn_host, "127.0.0.1:8080"
+  set :rails_environment, "production"
 end
 
 task :stage do
@@ -58,6 +60,8 @@ task :stage do
 	set :user, "webuser"
 	set :deploy_to, "/var/noisebytes/stage"
   set :unicorn_config, "stage_1.rb"
+  set :unicorn_host, "127.0.0.1:9090"
+  set :rails_environment, "production"
 	set :scm_command, "/usr/bin/git"
 end
 
@@ -68,6 +72,8 @@ task :dev do
 	set :user, "webuser"
 	set :deploy_to, "/var/noisebytes/dev"
   set :unicorn_config, "dev_1.rb"
+  set :unicorn_host, "127.0.0.1:9190"
+  set :rails_environment, "development"
 	set :scm_command, "/usr/bin/git"
 end
 
@@ -82,7 +88,7 @@ after 'deploy:update', 'bundle:install'
 
 namespace :deploy do
   task :start do
-    run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/production_1.rb -l 127.0.0.1:8080 -E production -D")
+    run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/#{unicorn_config} -l #{unicorn_host} -E #{rails_environment} -D")
   end
 
   task :stop do
