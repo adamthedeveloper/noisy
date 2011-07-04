@@ -22,8 +22,10 @@ APP_ROOT = Dir.pwd.gsub(/\/config*.+$/, '')
 working_directory APP_ROOT
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/91090.sock", :backlog => 64
-listen 9090, :tcp_nopush => true
+#listen "/tmp/91090.sock", :backlog => 64
+listen "/tmp/unicorn_stage_1.sock", :backlog => 64
+
+#listen 9090, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
