@@ -88,10 +88,21 @@ namespace :bundle do
 end
 
 after 'deploy:update', 'bundle:install'
+after 'deploy:update', 'deploy:copy_configs'
+after 'deploy:copy_configs', 'deploy:permissions'
+after 'deploy:copy_configs', 'deploy:migrate'
 
 namespace :deploy do
-  task :start do
+  task :migrate do
+    run("cd #{current_release} && rake db:migrate")
+  end
+  task :copy_configs do
     run("cd #{current_release}/config && cp /home/webuser/noisebytes/config/#{config_folder}/database.yml .")
+  end
+  task :permissions do
+    run("chown -R #{user}:#{user} #{current_release}")
+  end
+  task :start do
     run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/#{unicorn_config} -l #{unicorn_host} -E #{rails_environment} -D")
   end
 
