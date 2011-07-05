@@ -91,6 +91,7 @@ after 'deploy:update', 'bundle:install'
 after 'deploy:update', 'deploy:copy_configs'
 after 'deploy:copy_configs', 'deploy:permissions'
 after 'deploy:copy_configs', 'deploy:migrate'
+after 'deploy:restart', 'deploy:nginx:restart'
 
 namespace :deploy do
   task :migrate do
@@ -101,6 +102,7 @@ namespace :deploy do
   end
   task :permissions do
     run("chown -R #{user}:#{user} #{current_release}")
+    run("chmod -R 666 #{current_release}/log")
   end
   task :start do
     run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/#{unicorn_config} -l #{unicorn_host} -E #{rails_environment} -D")
@@ -121,16 +123,19 @@ namespace :deploy do
 
   namespace :nginx do
     task :start do
-      sudo("/usr/sbin/nginx -c /usr/local/nginx/conf/nginx.conf -d")
+      sudo("/usr/sbin/nginx -c /usr/local/nginx/conf/nginx.conf")
+#      sudo("/etc/init.d/nginx start")
     end
 
     task :stop do
-      sudo("kill  `ps -ef | grep 'nginx' | grep 'master' | awk '{pring $2}'`")
+      sudo("x=`ps -ef | grep 'nginx' | grep 'master' | awk '{print $2}'`; if [ \"$x\" ]; then kill $x; fi")
+#      sudo("/etc/init.d/nginx stop")
     end
 
     task :restart do
       nginx.stop
       nginx.start
+#      sudo("/etc/init.d/nginx restart")
     end
   end
 
