@@ -50,6 +50,7 @@ task :prod do
 	set :scm_command, "/usr/bin/git"
   set :unicorn_config, "production_1.rb"
   set :unicorn_host, "127.0.0.1:8080"
+  set :config_folder, "production"
   set :rails_environment, "production"
 end
 
@@ -62,6 +63,7 @@ task :stage do
   set :unicorn_config, "stage_1.rb"
   set :unicorn_host, "127.0.0.1:9090"
   set :rails_environment, "production"
+  set :config_folder, "stage"
 	set :scm_command, "/usr/bin/git"
 end
 
@@ -74,6 +76,7 @@ task :dev do
   set :unicorn_config, "dev_1.rb"
   set :unicorn_host, "127.0.0.1:9190"
   set :rails_environment, "development"
+  set :config_folder, "dev"
 	set :scm_command, "/usr/bin/git"
 end
 
@@ -88,6 +91,7 @@ after 'deploy:update', 'bundle:install'
 
 namespace :deploy do
   task :start do
+    run("cd #{current_release}/config && cp /home/webuser/noisebytes/config/#{config_folder}/database.yml .")
     run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/#{unicorn_config} -l #{unicorn_host} -E #{rails_environment} -D")
   end
 
@@ -106,7 +110,7 @@ namespace :deploy do
 
   namespace :nginx do
     task :start do
-      sudo("/usr/local/nginx/sbin/nginx -c #{current_release}/config/nginx/nginx.conf")
+      sudo("/usr/sbin/nginx -c /usr/local/nginx/conf/nginx.conf -d")
     end
 
     task :stop do
