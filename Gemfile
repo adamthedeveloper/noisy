@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 source 'http://github.com'
 
-gem 'rails', '3.0.0.rc'
+gem 'rails', '= 3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'awesome_print', :require => 'ap'
 gem 'aws-s3'
 gem 'capistrano'
-gem 'carrierwave'
+gem 'carrierwave', :git => 'git://github.com/adamthedeveloper/carrierwave.git'
 gem 'cijoe'
 gem 'cucumber'
 gem 'devise'
