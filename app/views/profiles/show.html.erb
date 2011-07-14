@@ -2,7 +2,7 @@
 <div id="profile_container">
   <div id="profile_left">
     <p>
-      <%= image_tag @profile.avatar.url(:thumb), :class => "avatar slightly-round" %>
+      <%= image_tag @profile.avatar_url(:thumb), :class => "avatar slightly-round" %>
     </p>
 
     <div id="blip_box">
@@ -92,11 +92,11 @@
     <h3 class="add-bottom-margin">Fans</h3>
     <table>
       <tr>
-        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
-        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
-        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
-        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
-        <td><%= image_tag @profile.avatar.url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar_url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar_url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar_url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar_url(:tiny) %></td>
+        <td><%= image_tag @profile.avatar_url(:tiny) %></td>
       </tr>
     </table>
   </div>

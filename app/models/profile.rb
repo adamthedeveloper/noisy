@@ -1,8 +1,8 @@
 class Profile < ActiveRecord::Base
   belongs_to :account
   validates_presence_of :account
-  s3 = Images::S3.new.configuration
-  has_attached_file :avatar, s3.merge!(:styles => { :tiny => "66x49#", :thumb => "202x148#", :medium => "320x320>", :original => "400x400>" })
+
+  mount_uploader :avatar, AvatarUploader
 
   def full_name
     "#{first_name} #{last_name}"
@@ -10,5 +10,10 @@ class Profile < ActiveRecord::Base
 
   def location
     "#{city}, #{state}"
+  end
+
+  def avatar_url(type)
+    return avatar.send(type).url if avatar.present?
+    '/images/logo.png'
   end
 end

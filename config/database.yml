@@ -21,7 +21,7 @@ development:
   database: noisebytes_development
   pool: 5
   username: root
-  password: canvas10
+  password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -34,7 +34,7 @@ test: &test
   database: noisebytes_test
   pool: 5
   username: root
-  password: canvas10
+  password:
   socket: /tmp/mysql.sock
 
 production:

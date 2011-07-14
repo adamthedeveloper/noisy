@@ -18,9 +18,10 @@ gem 'heroku'
 gem 'hpricot'
 gem "json"
 gem 'mysql'
-gem 'paperclip'
+#gem 'paperclip'
 gem 'rails-footnotes'
 gem 'ruby_parser'
+gem 'rmagick'
 gem "sinatra", "= 1.0"
 gem 'unicorn'
 gem 'warden'
