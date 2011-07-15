@@ -1,11 +1,17 @@
 Noisebytes::Application.routes.draw do
   devise_for :accounts, :controllers => {:registrations => 'registrations', :profiles => 'profiles'}
-  resources :carts, :has_many => :purchase_items
   resources :index
-  resources :orders, :has_many => :purchase_items
-  resources :products
-  resources :purchase_items
+  #resources :orders, :has_many => :purchase_items
+  #resources :products
+  #resources :purchase_items
   resources :profiles
+  namespace :wepay do
+    resources :authorize, :only => [:index]
+  end
+  namespace :purchase do
+    resources :credits
+    resource :cart, :has_many => :purchase_items
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

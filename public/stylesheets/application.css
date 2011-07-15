@@ -20,7 +20,11 @@ body {
 }
 
 #header_container {
-    width: 100%;
+    width: 950px;
+}
+
+#container_body {
+    width: 960px;
 }
 
 #logo {
@@ -88,7 +92,8 @@ div.green-background * {
 }
 
 #header_rule {
-    /*width: 100%;*/
+    width: 100%;
+    height: 2px;
     margin: 20px 0 20px 0;
 }
 
@@ -188,6 +193,10 @@ span.dark-blue {
 
 .add-10px-bottom-margin {
     margin-bottom: 10px;
+}
+
+.add-10px-top-bottom-margin {
+    margin: 10px 0 10px 0;
 }
 
 .add-line-height {
@@ -296,9 +305,9 @@ textarea {
 }
 
 img.h_divider {
-    height: 4px;
+    height: 2px;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 span.explanation {
@@ -547,3 +556,60 @@ Footer
 End Footer
 *****************************************/
 
+
+/****************************************
+Purchase Credits
+*****************************************/
+#credit_tiers { width:100%; margin: 0; padding: 0; }
+.tier {
+    float: left;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    width: 200px;
+    background-color: #446898;
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+}
+.tier p {
+    padding: 10px 0 0 0;
+}
+
+/****************************************
+End Purchase Credits
+*****************************************/
+
+/****************************************
+Shopping Cart
+*****************************************/
+#cart_items { width:100%; margin: 0; padding: 0; }
+.item {
+    float: left;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    /*width: 100%;*/
+    background-color: #446898;
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+}
+.item div {
+    float: left;
+    padding: 10px;
+}
+.item .name_description {
+    height: auto;
+    width: 250px;
+    margin-right: 200px;
+}
+.item .qnty {
+    width: 100px;
+}
+.item .price {
+    width: 150px;
+}
+.item .line_total {
+    width: 150px;
+}
+
+/****************************************
+End Shopping Cart
+*****************************************/

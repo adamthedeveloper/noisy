@@ -1,0 +1,23 @@
+%h2
+  Your Shopping Cart
+#cart_items
+  - if @cart.purchase_items.present?
+    - @cart.purchase_items.each do |cart_item|
+      .item
+        .name_description
+          %h4.add-10px-bottom-margin
+          = cart_item.product.name
+          %p
+            = cart_item.product.description
+          - if cart_item.product.kind == 'Credit'
+            %p.text-small.add-10px-top-margin
+              With a quantity of #{cart_item.quantity}, #{cart_item.quantity*cart_item.product.credit_value} credits will be added to your account!
+        .qnty
+          = "Qnty: #{cart_item.quantity}"
+        .price
+          Price: #{cents_to_currency cart_item.product.price}
+        .line_total
+          Line total: #{cents_to_currency cart_item.line_total}
+  - else
+    %h4
+      It looks like your cart is empty

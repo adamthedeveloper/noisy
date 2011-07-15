@@ -23,6 +23,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     build_resource
     resource.build_profile
+    resource.build_cart
     if resource.save
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
@@ -50,5 +51,10 @@ class RegistrationsController < Devise::RegistrationsController
       clean_up_passwords(resource)
     end
     redirect_to edit_profile_path(@profile)
+  end
+
+  private
+  def after_sign_up_path_for(resource)
+    edit_profile_path(current_profile)
   end
 end

@@ -4,4 +4,8 @@ class PurchaseItem < ActiveRecord::Base
   validates_presence_of :product
 
   scope :with_product, lambda { |product| { :conditions => ['product_id = ?', product] } }
+
+  def line_total
+    quantity*product.price
+  end
 end

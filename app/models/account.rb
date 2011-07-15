@@ -13,4 +13,9 @@ class Account < ActiveRecord::Base
   has_one :cart
   has_one :shipping_address, :as => :shipping_addressable
   has_one :billing_address, :as => :billing_addressable
+
+  def shopping_cart
+    build_cart and save! unless cart.present?
+    @cart ||= cart
+  end
 end

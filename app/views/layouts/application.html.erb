@@ -11,7 +11,9 @@
 <body>
 <div id="container">
 <%= render :partial => "index/header" %>
-<%= yield %>
+<div id="container_body">
+  <%= yield %>
+</div>
 <%= render :partial => 'index/footer' %>
 </div>
 </body>

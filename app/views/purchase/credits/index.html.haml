@@ -1,0 +1,17 @@
+%h2.add-10px-bottom-margin Purchase Credits
+%p
+  In order to download sounds, you'll need to buy some credits. Please choose one of the price tiers below:
+#credit_tiers
+  - @credit_tiers.each do |tier|
+    .tier
+      %h4.add-10px-bottom-margin
+        = tier.name
+      %p
+        = tier.description
+      %p
+        = cents_to_currency tier.price
+      %p
+        = form_for([:purchase, @cart], :url => purchase_cart_path) do |f|
+          = hidden_field_tag 'product', tier.id
+          = hidden_field_tag 'qnty', 1
+          = submit_tag "Add to Cart",{:class => "shadow"}

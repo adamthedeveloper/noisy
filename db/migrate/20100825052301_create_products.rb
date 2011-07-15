@@ -3,9 +3,9 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.text :description
-      t.float :price
-      t.integer :credit_value, :default => 0
-      t.string :type, :default => 'Credit'
+      t.integer :price
+      t.integer :credit_value, :default => nil
+      t.string :kind, :default => 'Credit'
 
       t.timestamps
     end
