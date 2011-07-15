@@ -16,6 +16,7 @@ gem 'fog'
 gem 'haml'
 gem 'heroku'
 gem 'hpricot'
+gem 'httparty'
 gem "json"
 gem 'mysql'
 #gem 'paperclip'

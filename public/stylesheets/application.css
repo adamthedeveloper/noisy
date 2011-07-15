@@ -282,6 +282,7 @@ input[type=submit] {
     font-size:18px;
     color: #222711;
     margin-left: 189px;
+    cursor: pointer;
 }
 
 input[type=submit]#profile_submit {
@@ -548,7 +549,7 @@ Footer
 *****************************************/
 #footer {
     margin: 55px 0 0 0;
-    width: 100%;
+    width: 950px;
     float: left;
 }
 
@@ -597,8 +598,7 @@ Shopping Cart
 }
 .item .name_description {
     height: auto;
-    width: 250px;
-    margin-right: 200px;
+    width: 400px;
 }
 .item .qnty {
     width: 100px;
@@ -607,7 +607,13 @@ Shopping Cart
     width: 150px;
 }
 .item .line_total {
-    width: 150px;
+    width: 200px;
+    text-align:right;
+}
+
+#checkout_controls {
+    text-align: right;
+    width: 950px;
 }
 
 /****************************************

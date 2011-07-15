@@ -40,5 +40,6 @@ module Noisebytes
     config.filter_parameters += [:password]
 
     config.autoload_paths << "#{Rails.root}/lib/noisebytes"
+    config.autoload_paths << "#{Rails.root}/lib"
   end
 end

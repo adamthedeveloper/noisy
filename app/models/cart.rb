@@ -74,4 +74,9 @@ class Cart < ActiveRecord::Base
     end
   end
 
+  def grand_total
+    # I am sure there will be more to add to this at some point
+    subtotal
+  end
+
 end

@@ -18,6 +18,15 @@
           Price: #{cents_to_currency cart_item.product.price}
         .line_total
           Line total: #{cents_to_currency cart_item.line_total}
+    .item
+      .name_description
+      .qnty
+      .price
+      .line_total
+        Grand total: #{cents_to_currency @cart.grand_total}
+    #checkout_controls
+      = form_tag(purchase_checkout_index_path, :method => 'get') do |f|
+        = submit_tag "Continue Purchase",{:class => "shadow"}
   - else
     %h4
       It looks like your cart is empty
