@@ -85,9 +85,12 @@ namespace :bundle do
   task :install, :roles => :app do
     run("cd #{current_release} && bundle install")
   end
+  task :update, :roles => :app do
+    run("cd #{current_release} && bundle update")
+  end
 end
 
-after 'deploy:update', 'bundle:install'
+after 'deploy:update', 'bundle:update'
 after 'deploy:update', 'deploy:copy_configs'
 after 'deploy:copy_configs', 'deploy:permissions'
 after 'deploy:copy_configs', 'deploy:migrate'
