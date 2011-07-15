@@ -256,6 +256,7 @@ DEPENDENCIES
   hpricot
   httparty
   json
+  kgio (= 2.5.0)
   launchy
   machinist (= 1.0.6)
   mysql

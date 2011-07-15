@@ -94,25 +94,25 @@ after 'deploy:copy_configs', 'deploy:migrate'
 after 'deploy:restart', 'deploy:nginx:restart'
 
 namespace :deploy do
-  task :migrate do
+  task :migrate, :roles => :app do
     run("cd #{current_release} && rake db:migrate")
   end
-  task :copy_configs do
+  task :copy_configs, :roles => :web do
     run("cd #{current_release}/config && cp /home/webuser/noisebytes/config/#{config_folder}/database.yml .")
   end
-  task :permissions do
+  task :permissions, :roles => :web do
     run("chown -R #{user}:#{user} #{current_release}")
-    run("chmod -R 666 #{current_release}/log")
+    run("chmod -R 766 #{current_release}/log")
   end
-  task :start do
+  task :start, :roles => :web do
     run("cd #{current_release} && unicorn_rails -c #{current_release}/config/unicorn/#{unicorn_config} -l #{unicorn_host} -E #{rails_environment} -D")
   end
 
-  task :stop do
+  task :stop, :roles => :web do
     run("kill -QUIT `ps -ef | grep unicorn | grep master | grep '#{unicorn_host}' | awk '{print $2}'` && rm -rf #{current_release}/tmp/pids")
   end
 
-  task :restart do
+  task :restart, :roles => :web do
     puts "*"*50
     puts "Restarting Unicorns..."
     deploy.stop
@@ -122,17 +122,17 @@ namespace :deploy do
   end
 
   namespace :nginx do
-    task :start do
+    task :start, :roles => :web do
       sudo("/usr/sbin/nginx -c /usr/local/nginx/conf/nginx.conf")
 #      sudo("/etc/init.d/nginx start")
     end
 
-    task :stop do
+    task :stop, :roles => :web do
       sudo("x=`ps -ef | grep 'nginx' | grep 'master' | awk '{print $2}'`; if [ \"$x\" ]; then kill $x; fi")
 #      sudo("/etc/init.d/nginx stop")
     end
 
-    task :restart do
+    task :restart, :roles => :web do
       nginx.stop
       nginx.start
 #      sudo("/etc/init.d/nginx restart")

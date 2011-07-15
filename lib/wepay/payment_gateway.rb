@@ -1,5 +1,5 @@
 module Wepay
-  class Transport
+  class PaymentGateway
     include HTTParty
 
     base_uri @base_uri

@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.xml
   def show
-    @profile = Profile.find_by_account_id(current_account.id)
+    @profile = current_profile #Profile.find_by_account_id(current_account.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,7 +36,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = current_profile #Profile.find(params[:id])
     @account = current_account
   end
 
@@ -59,7 +59,7 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1
   # PUT /profiles/1.xml
   def update
-    @profile = Profile.find(params[:id])
+    @profile = current_profile #Profile.find(params[:id])
 
     respond_to do |format|
       if @profile.update_attributes(params[:profile])
@@ -75,7 +75,7 @@ class ProfilesController < ApplicationController
   # DELETE /profiles/1
   # DELETE /profiles/1.xml
   def destroy
-    @profile = Profile.find(params[:id])
+    @profile = current_profile #Profile.find(params[:id])
     @profile.destroy
 
     respond_to do |format|
