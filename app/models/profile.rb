@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  include Wepay
+  include Wepay::Helpers::ModelHelpers
 
   belongs_to :account
   validates_presence_of :account
