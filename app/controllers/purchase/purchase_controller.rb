@@ -3,6 +3,6 @@ class Purchase::PurchaseController < ApplicationController
 
   private
   def gateway
-    @gateway ||= PaymentGateway.new
+    @gateway ||= Wepay::PaymentGateway.new
   end
 end
