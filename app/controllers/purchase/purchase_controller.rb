@@ -1,5 +1,5 @@
+include Wepay
 class Purchase::PurchaseController < ApplicationController
-  include Wepay
 
   private
   def gateway
