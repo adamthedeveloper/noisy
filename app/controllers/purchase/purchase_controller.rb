@@ -2,5 +2,5 @@ class Purchase::PurchaseController < ApplicationController
 
   private
 
-  include Wepay
+  include Wepay::Payments
 end
