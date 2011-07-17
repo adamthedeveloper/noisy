@@ -1,0 +1,9 @@
+production:
+  client_id: 38930
+  client_secret: 36207df30a
+development:
+  client_id: 38930
+  client_secret: 36207df30a
+test:
+  client_id: 38930
+  client_secret: 36207df30a
