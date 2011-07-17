@@ -24,7 +24,7 @@ set :scm, :git
 set :scm_verbose, true
 set :scm_username, "user"
 set :scm_passphrase, "g0bst0pp3r"
-set :scm_command, "/opt/local/bin/git"
+set :scm_command, "/usr/local/bin/git"
 
 # Notes from help.github.com/capistrano
 # Remote Cache In most cases you want to use this option, otherwise each deploy will do a full repository clone everytime

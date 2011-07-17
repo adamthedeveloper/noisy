@@ -2,7 +2,7 @@ class Profile < ActiveRecord::Base
   belongs_to :account
   validates_presence_of :account
 
-  mount_uploader :avatar, AvatarUploader
+  mount_uploader :avatar, AvatarUploader, :as => :avatar
 
   def full_name
     "#{first_name} #{last_name}"
