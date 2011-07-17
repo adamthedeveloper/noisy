@@ -27,6 +27,7 @@ gem 'rmagick'
 gem "sinatra", "= 1.0"
 gem 'unicorn'
 gem 'warden'
+gem 'wepay-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

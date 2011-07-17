@@ -1,5 +1,5 @@
 class Purchase::PurchaseController < ApplicationController
 
   private
-  include Wepay::Payments
+  include WepayRails::Payments
 end

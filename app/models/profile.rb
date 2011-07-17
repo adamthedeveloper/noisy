@@ -1,10 +1,10 @@
 class Profile < ActiveRecord::Base
-  include Wepay::Helpers::ModelHelpers
-
   belongs_to :account
   validates_presence_of :account
 
   mount_uploader :avatar, AvatarUploader, :as => :avatar
+
+  wepayable :wepay_auth_code
 
   def full_name
     "#{first_name} #{last_name}"
