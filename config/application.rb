@@ -39,7 +39,7 @@ module Noisebytes
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
-    config.autoload_paths << "#{Rails.root}/lib/noisebytes"
+    config.autoload_paths << "#{Rails.root}/lib/**/*"
     config.autoload_paths << "#{Rails.root}/lib"
   end
 end
