@@ -10,12 +10,8 @@ module Wepay
         @config = YAML.load_file(yml)[Rails.env].symbolize_keys
         @base_uri = Rails.env.production? ? "https://api.wepay.com" : "https://stage.wepay.com"
       end
-
-      include Wepay::Payments::Helpers
     end
 
-    def gateway
-      @gateway ||= Gateway.new
-    end
+    include Wepay::Helpers::ControllerHelpers
   end
 end
