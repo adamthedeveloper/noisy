@@ -10,6 +10,10 @@ module Wepay
       @base_uri = Rails.env.production? ? "https://api.wepay.com" : "https://stage.wepay.com"
     end
 
-    include Wepay::Helpers
+    include Wepay::PaymentGateway::Helpers
+  end
+
+  def gateway
+    @gateway ||= PaymentGateway.new
   end
 end
