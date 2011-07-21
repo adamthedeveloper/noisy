@@ -4,11 +4,11 @@ class Purchase::CheckoutController < Purchase::PurchaseController
   def index
     if current_profile.has_wepay_auth_code?
       if wepay_access_token_exists?
-        puts "CheckoutController#index if wepay_access_token_exists?"
+        logger.debug "CheckoutController#index if wepay_access_token_exists?"
       else
-        puts "CheckoutController#index else"
+        logger.debug "CheckoutController#index else"
         initialize_wepay_access_token(current_profile.wepay_auth_code)
-        puts "CheckoutController#index after initialize_wepay_access_token call - sending #{current_profile.wepay_auth_code}"
+        logger.debug "CheckoutController#index after initialize_wepay_access_token call - sending #{current_profile.wepay_auth_code}"
       end
       gateway.wepay_auth_code = current_profile.wepay_auth_code
       render :json => gateway.wepay_user
