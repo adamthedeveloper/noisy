@@ -2,11 +2,14 @@ production:
   client_id: 38930
   client_secret: 36207df30a
   redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
+  scope: ['refund_payments','collect_payments','view_balance','view_user']
 development:
   client_id: 38930
   client_secret: 36207df30a
   redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
+  scope: ['refund_payments','collect_payments','view_balance','view_user']
 test:
   client_id: 38930
   client_secret: 36207df30a
   redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
+  scope: ['refund_payments','collect_payments','view_balance','view_user']
