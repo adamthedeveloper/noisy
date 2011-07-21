@@ -1,9 +1,12 @@
 production:
   client_id: 38930
   client_secret: 36207df30a
+  redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
 development:
   client_id: 38930
   client_secret: 36207df30a
+  redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
 test:
   client_id: 38930
   client_secret: 36207df30a
+  redirect_uri: "http://dev.noisebytes.com/wepay/authorize"
