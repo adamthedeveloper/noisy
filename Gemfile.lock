@@ -227,7 +227,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    wepay-rails (0.1.29)
+    wepay-rails (0.1.34)
       httparty
     xml-simple (1.1.0)
     xpath (0.1.4)
