@@ -4,10 +4,11 @@ class Purchase::CheckoutController < Purchase::PurchaseController
   def index
     if current_profile.has_wepay_auth_code?
       if wepay_access_token_exists?
+        render :json => gateway.wepay_user
+        return
       else
         initialize_wepay_access_token(current_profile.wepay_auth_code)
       end
-      render :json => gateway.wepay_user
     else
       redirect_to_wepay_for_auth
     end
