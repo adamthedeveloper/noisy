@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110714153645) do
+ActiveRecord::Schema.define(:version => 20110814072325) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(:version => 20110714153645) do
     t.datetime "updated_at"
     t.float    "subtotal",   :default => 0.0
   end
+
+  create_table "checkout_transactions", :force => true do |t|
+    t.string   "unique_token"
+    t.integer  "cart_id"
+    t.string   "status"
+    t.text     "response"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "checkout_transactions", ["cart_id"], :name => "index_checkout_transactions_on_cart_id"
+  add_index "checkout_transactions", ["unique_token"], :name => "index_checkout_transactions_on_unique_token"
 
   create_table "orders", :force => true do |t|
     t.integer  "account_id"

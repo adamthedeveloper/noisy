@@ -7,11 +7,13 @@ Noisebytes::Application.routes.draw do
   resources :profiles
   namespace :wepay do
     resources :authorize, :only => [:index]
+    resources :ipn, :only => [:index]
   end
   namespace :purchase do
     resources :credits
     resource :cart, :has_many => :purchase_items
     resources :checkout, :only => [:index]
+    resources :finalize, :only => [:index]
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

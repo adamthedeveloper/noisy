@@ -23,7 +23,7 @@ gem 'mysql'
 #gem 'paperclip'
 gem 'rails-footnotes'
 gem 'ruby_parser'
-gem 'rmagick'
+gem 'mini_magick'
 gem "sinatra", "= 1.0"
 gem 'unicorn'
 gem 'warden'

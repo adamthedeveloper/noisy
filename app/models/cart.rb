@@ -2,6 +2,7 @@ class Cart < ActiveRecord::Base
   has_many :purchase_items, :as => :purchaseable
   has_one :shipping_address, :as => :shipping_addressable
   has_one :billing_address, :as => :billing_addressable
+  has_many :checkout_transactions
   belongs_to :account
   validates_presence_of :account
 
@@ -77,6 +78,25 @@ class Cart < ActiveRecord::Base
   def grand_total
     # I am sure there will be more to add to this at some point
     subtotal
+  end
+
+  def short_description
+    "Noisebytes: Store Credits Purchase"
+  end
+
+  def long_description
+    out = ""
+    purchase_items.each do |item|
+      out << item.product.name + "\n\n"
+    end
+    out
+  end
+
+  def init_transaction
+    uniq_token = Digest::SHA1.hexdigest("#{Time.now.to_i+id}")
+    self.checkout_transactions.build(:unique_token => uniq_token)
+    self.save!
+    uniq_token
   end
 
 end
