@@ -20,7 +20,6 @@ gem 'httparty'
 gem "json"
 gem 'kgio', '2.5.0'
 gem 'mysql'
-#gem 'paperclip'
 gem 'rails-footnotes'
 gem 'ruby_parser'
 gem 'mini_magick'
