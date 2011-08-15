@@ -1,9 +1,9 @@
-require "rvm/capistrano"
 require 'yaml'
 require 'bundler/capistrano'
 
 set :rvm_type, :user
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "rvm/capistrano"
 set :rvm_ruby_string, 'ruby-1.9.2@noisebytes'
 
 # User
