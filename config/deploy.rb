@@ -11,8 +11,9 @@ set :rvm_ruby_string, 'ruby-1.9.2-p290@noisebytes'
 set :use_sudo, false
 
 # Options
-ssh_options[:forward_agent] = true
-ssh_options[:keys] = "/home/adam/.ssh/id_rsa"
+set :ssh_options, {:forward_agent => true, :keys => "/home/adam/.ssh/id_rsa"}
+#ssh_options[:forward_agent] = true
+#ssh_options[:keys] = "/home/adam/.ssh/id_rsa"
 default_run_options[:pty] = true
 
 # Repo Info
@@ -96,17 +97,12 @@ end
 #end
 
 #after 'deploy:update', 'bundle:update'
-before 'bundle:update','deploy:set_env_vars'
-before 'bundle:install','deploy:set_env_vars'
 after 'deploy:update', 'deploy:copy_configs'
 after 'deploy:copy_configs', 'deploy:permissions'
 after 'deploy:copy_configs', 'deploy:migrate'
 after 'deploy:restart', 'deploy:nginx:restart'
 
 namespace :deploy do
-  task :set_env_vars, :roles => :app do
-    run("LC_ALL=en_US.UTF-8; export LC_ALL; LANG=en_US.UTF-8; export LANG")
-  end
   task :migrate, :roles => :app do
     run("cd #{current_release} && rake db:migrate")
   end
