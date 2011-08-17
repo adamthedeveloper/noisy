@@ -15,7 +15,8 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 # Repo Info
-set :repository, "git@github.com:adamthedeveloper/noisy.git"
+#set :repository, "git@github.com:adamthedeveloper/noisy.git"
+set :repository, "git@scarythings.unfuddle.com:scarythings/noisy.git"
 set :branch, "master"
 
 # Application Info
@@ -25,8 +26,8 @@ set :application, "Noisy"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :scm_verbose, true
-set :scm_username, "user"
-set :scm_passphrase, "g0bst0pp3r"
+set :scm_username, "webuser"
+set :scm_passphrase, "apFHY1"
 set :scm_command, "/usr/local/bin/git"
 
 # Notes from help.github.com/capistrano
@@ -51,10 +52,10 @@ task :prod do
 	set :user, "webuser"
 	set :deploy_to, "/var/noisebytes/production"
 	set :scm_command, "/usr/bin/git"
-  set :unicorn_config, "production_1.rb"
-  set :unicorn_host, "127.0.0.1:8080"
-  set :config_folder, "production"
-  set :rails_environment, "production"
+    set :unicorn_config, "production_1.rb"
+    set :unicorn_host, "127.0.0.1:8080"
+    set :config_folder, "production"
+    set :rails_environment, "production"
 end
 
 task :stage do
@@ -63,10 +64,10 @@ task :stage do
 	role :db, "74.50.50.135", :primary => true
 	set :user, "webuser"
 	set :deploy_to, "/var/noisebytes/stage"
-  set :unicorn_config, "stage_1.rb"
-  set :unicorn_host, "127.0.0.1:9090"
-  set :rails_environment, "production"
-  set :config_folder, "stage"
+    set :unicorn_config, "stage_1.rb"
+    set :unicorn_host, "127.0.0.1:9090"
+    set :rails_environment, "production"
+    set :config_folder, "stage"
 	set :scm_command, "/usr/bin/git"
 end
 
@@ -76,10 +77,10 @@ task :dev do
 	role :db, "74.50.50.135", :primary => true
 	set :user, "webuser"
 	set :deploy_to, "/var/noisebytes/dev"
-  set :unicorn_config, "dev_1.rb"
-  set :unicorn_host, "127.0.0.1:9190"
-  set :rails_environment, "development"
-  set :config_folder, "dev"
+    set :unicorn_config, "dev_1.rb"
+    set :unicorn_host, "127.0.0.1:9190"
+    set :rails_environment, "development"
+    set :config_folder, "dev"
 	set :scm_command, "/usr/bin/git"
 end
 
