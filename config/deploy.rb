@@ -105,7 +105,7 @@ namespace :deploy do
     run("cd #{current_release} && rake db:migrate")
   end
   task :copy_configs, :roles => :web do
-    run("cd #{current_release}/config && cp /home/webuser/noisebytes/config/#{config_folder}/database.yml .")
+    run("export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 && cd #{current_release}/config && cp /home/webuser/noisebytes/config/#{config_folder}/database.yml .")
   end
   task :permissions, :roles => :web do
     run("chown -R #{user}:#{user} #{current_release}")
