@@ -104,7 +104,7 @@ after 'deploy:restart', 'deploy:nginx:restart'
 
 namespace :deploy do
   task :set_env_vars, :roles => :app do
-    run("export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8")
+    run("LC_ALL=en_US.UTF-8; export LC_ALL; LANG=en_US.UTF-8; export LANG")
   end
   task :migrate, :roles => :app do
     run("cd #{current_release} && rake db:migrate")
