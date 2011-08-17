@@ -12,7 +12,7 @@ set :use_sudo, false
 
 # Options
 ssh_options[:forward_agent] = true
-ssh_options[:keys] = "/home/adam/.ssh/id_rsa.pub"
+ssh_options[:keys] = "/home/adam/.ssh/id_rsa"
 default_run_options[:pty] = true
 
 # Repo Info
