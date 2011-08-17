@@ -96,6 +96,7 @@ end
 
 #after 'deploy:update', 'bundle:update'
 before 'bundle:update','deploy:set_env_vars'
+before 'bundle:install','deploy:set_env_vars'
 after 'deploy:update', 'deploy:copy_configs'
 after 'deploy:copy_configs', 'deploy:permissions'
 after 'deploy:copy_configs', 'deploy:migrate'
