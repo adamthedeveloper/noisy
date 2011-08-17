@@ -11,8 +11,8 @@ set :rvm_ruby_string, 'ruby-1.9.2-p290@noisebytes'
 set :use_sudo, false
 
 # Options
-set :ssh_options, {:forward_agent => true, :keys => "/home/adam/.ssh/id_rsa"}
-#ssh_options[:forward_agent] = true
+#set :ssh_options, {:forward_agent => true}
+ssh_options[:forward_agent] = true
 #ssh_options[:keys] = "/home/adam/.ssh/id_rsa"
 default_run_options[:pty] = true
 
