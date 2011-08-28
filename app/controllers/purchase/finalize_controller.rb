@@ -1,4 +1,4 @@
-class FinalizeController < ApplicationController
+class Purchase::FinalizeController < ApplicationController
   def index
 
   end
